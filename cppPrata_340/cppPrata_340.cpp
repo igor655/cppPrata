@@ -21,14 +21,20 @@ int main()
     // recursion
     // Given a natural number n
     // Print all numbers from 1 to n
+    // examples
+    // n = 5 --  1 2 3 4 5 
+    //n = -5 --  1 0 -1 -2 -3 -4 -5
+    // n = 0     1 0
 
    
 
     //=============================
-    fun(10);
+    fun(5);
     cout << endl;
 
-    fun2(-9, 1);
+    fun2(-5, 1);
+    cout << endl;
+    fun2(0, 1);
 
 
     
@@ -65,6 +71,8 @@ void q1(int n5 , int j)
     
 }
 
+
+// recursion for positive numbers 
 void fun(int i)
 {
     if (i > 0)
