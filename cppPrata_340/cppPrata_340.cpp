@@ -3,11 +3,15 @@
 
 #include <iostream>
 #include<Windows.h>
+#include<fstream>
 //#include<ios> //used to get stream size
 //#include<limits> //used to get numeric limits
 using namespace std;
 
 void q1(int n5, int j);
+
+void fun(int i);
+void fun2(int i, int k);
 
 int main()
 {
@@ -18,27 +22,16 @@ int main()
     // Given a natural number n
     // Print all numbers from 1 to n
 
-    int n = 3;
+   
 
-    /*if (n == 0)
-    {
+    //=============================
+    fun(10);
+    cout << endl;
 
-        cout << "1 " << "0 " << endl;
-    }
-    else if (n > 0)
-    {
-        for (size_t i = 1; i <= n; i++)
-        {
-            cout << i << " " ;
-
-        }
-        cout << endl;
-    }*/
-
-    q1(n +1 , 1);
+    fun2(-9, 1);
 
 
-
+    
 
 return 0;
 }
@@ -70,6 +63,32 @@ void q1(int n5 , int j)
     }
 
     
+}
+
+void fun(int i)
+{
+    if (i > 0)
+    {
+        //cout << i-- << " ";
+        i--;
+        fun(i );
+    }
+    else return;
+    cout << i +1 << " ";
+
+   
+   
+
+}
+
+void fun2(int i, int k)
+{
+    if (k < i)
+    {
+        return;
+    }
+    cout << k-- << " ";
+    fun2(i, k);
 }
 
 
