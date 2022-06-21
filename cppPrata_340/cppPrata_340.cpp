@@ -11,7 +11,7 @@ using namespace std;
 void q1(int n5, int j);
 
 void fun(int i);
-void fun2(int i, int k);
+void fun2(int i);
 
 int main()
 {
@@ -32,9 +32,9 @@ int main()
     fun(5);
     cout << endl;
 
-    fun2(-5, 1);
+    fun2(-4);
     cout << endl;
-    fun2(0, 1);
+    fun2(0);
 
 
     
@@ -43,33 +43,7 @@ return 0;
 }
 
 
-void q1(int n5 , int j)
-{
-    
-   
-    if ( n5 > 0)
-    {
-        for (size_t i = 1; i < n5; i++)
-        {
-            cout << i << " ";
 
-        }
-    }
-    
-
-    if (j+1 < n5)
-    {
-        //cout << n5;
-        return;
-    }
-    else
-    {
-        q1(n5 , j - 1);
-        cout  << n5 - j << " ";
-    }
-
-    
-}
 
 
 // recursion for positive numbers 
@@ -89,14 +63,32 @@ void fun(int i)
 
 }
 
-void fun2(int i, int k)
+// recursion for negative numbers 
+void fun2(int i)
 {
-    if (k < i)
+    
+    if (i  <= 1)
     {
-        return;
+    i++;
+    fun2(i);
     }
-    cout << k-- << " ";
-    fun2(i, k);
+    else return;
+   
+    cout << i - 1 << " ";
 }
+
+
+
+
+//void fun2(int i)
+//{
+//    if (i <= 1)
+//    {
+//        i++;
+//    }
+//    else return;
+//    cout << i << " ";
+//    fun2(i);
+//}
 
 
