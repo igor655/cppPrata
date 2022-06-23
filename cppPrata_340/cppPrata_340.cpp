@@ -13,6 +13,12 @@ struct polar
     double angle;
 };
 
+struct rect
+{
+    double x;
+    double y;
+};
+
 
 int main()
 {
